@@ -1,0 +1,11 @@
+<p>NEWS PAGE1</p>
+
+<div class='newsBlock'>
+{{#each model as |eachNews1|}}
+{{news-tile sendData='sendData' eachNews=eachNews1}}
+{{/each}}
+
+{{yield}}
+</div>
+{{outlet}}
+

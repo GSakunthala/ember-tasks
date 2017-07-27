@@ -7,6 +7,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('news', {path:'/news'}, function() {
+    this.route('newsDesc',{path:'/:article_id'});
+  });
+  this.route('student', function() {
+    this.route('performance',{path:'/:student_id'});
+  });
 });
 
 export default Router;

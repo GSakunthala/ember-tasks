@@ -1,0 +1,5 @@
+<h1>student</h1>
+{{#each model as |studentObj|}}
+{{#link-to 'student.performance' studentObj}}<div class='box'>{{studentObj.name}}</div>{{/link-to}}
+{{/each}}
+{{outlet}}
