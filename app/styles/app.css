@@ -1,6 +1,5 @@
-.box
+.btn-primary
 {
-	border : 1px solid black;
-	margin : 5px;
-	width :50%;
+	color: red;
+border:2px solid black;
 }
