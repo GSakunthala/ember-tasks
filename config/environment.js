@@ -2,6 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
+     moment: {
+     includeTimezone: 'all'
+    },
     modulePrefix: 'task',
     environment: environment,
     rootURL: '/',

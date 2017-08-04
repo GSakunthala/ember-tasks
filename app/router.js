@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('student', function() {
     this.route('performance',{path:'/:student_id'});
   });
+  this.route('customer-service');
 });
 
 export default Router;

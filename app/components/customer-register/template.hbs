@@ -1,0 +1,33 @@
+
+<div class="col-md-8 col-lg-12"><h1>REgistration page</h1>
+	 <div class="form-group row mt-3">
+	        <div class="col-md-8 col-lg-4">
+				{{customer-register/customer-name value=value placeholder=placeholder maxlength=maxlength  autocomplete=autoComplete
+	  			 name=valuePath onInputFocusOut='inputFocusIn' onKeyPress='inputKeyPress' labelTxt="FirstName"
+	  				disabled=disabled autofocus=autofocus labelId=valuePath}}
+	  		</div>
+	  </div>
+		<div class="form-group row col-md-12 ">
+		      <button id="ukb-contactForm-nextBtn" class="btn-primary" type="button" {{action "onComplete"}} data-toggle="modal" data-target="#myModal" >Submit</button>
+		</div>
+
+      <div id="myModal" class="modal">
+       <div class="modal-dialog">
+      	<div class="modal-content">
+       		<div class="modal-body">
+      			<p>{{errorMsg}}</p>
+      		</div>
+      	</div>
+      </div>
+      </div>
+
+      <div class="row col-md-12">
+      <p id="errorMsg">{{errorMsg}}</p>
+      </div>
+
+      <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+      
+      </div>
+
+
+{{yield}}
