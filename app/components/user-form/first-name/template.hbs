@@ -2,7 +2,7 @@
     <div class="col-12 col-md-10 col-lg-8">
           <div class="form-group">
 
-          {{validated-input type="text" labelId='firstName' isReadOnly=isReadonly model=this valuePath="firstName" labelTxt='First Name'}}
+          {{validated-input type="text"  labelId='firstName' isReadOnly=isReadonly model=this valuePath="firstName" labelTxt='First Name'}}
           </div>
         
           <div class="form-group">
@@ -23,6 +23,15 @@
           {{validated-input type="text" labelId='surname' isReadOnly=isReadonly model=this valuePath="phone" labelTxt='phone'}}
           </div>
       </div>
+
+  <div class="row justify-content-center ">
+      <div class="col-12 text-center ">
+       
+        <button type="button" class="btn btn-outline-primary callmeback__save-btn__cursor mb-4" {{action 'onCallMeBack'}} disabled= {{this.validations.isInvalid}}>
+          <span class="{{if isSpinnerStarts 'fa fa-refresh fa-spin fa-1x fa-fw' 'fa fa-angle-right'}}"  aria-hidden="true"></span> Submit
+        </button>
+      </div>
+    </div>   
     </div>
 
 </form>

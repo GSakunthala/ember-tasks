@@ -9,6 +9,6 @@
   
   .form-control-feedback
   {
-  	position: relative !important;
-  	width:100px !important;
+  	position: relative;
+  	width:100%;
   }

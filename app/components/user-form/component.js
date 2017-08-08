@@ -2,6 +2,9 @@ import Ember from 'ember';
 import moment from 'moment';
 
 export default Ember.Component.extend({
+	userDetails :'',
+	isValidForm : false,
+
 section:
     Ember.Object.create({
       name: 'fuel',
@@ -18,10 +21,18 @@ section:
     actions: {
     changeStep: function (value) {
     },
-    onCallMeBack:function()
+    onCallMeBack:function(user)
     {
     	alert('call me back');
-    }
+    	this.setProperties(
+    		{
+    			'userDetails':user,
+    			'isValidForm':true
+    		}
+    		);
+    	console.log(userDetails);
+
+}
 }
 
 

@@ -3,18 +3,33 @@
  
 		  <div class="row ">
 		                        <div class="col-12 text-center getquote__component">
-		                          {{component section.component section=section action=section.changeStep
+		                          {{component section.component section=section onSubmit='onCallMeBack'
 		                          }}
 		                        </div>
 		    </div>
  </div>
- </div>   
-  <div class="row justify-content-center ">
-      <div class="col-12 text-center ">
-       
-        <button type="button" class="btn btn-outline-primary callmeback__save-btn__cursor mb-4" {{action 'onCallMeBack'}} disabled= {{section.isInvalidForm}}>
-          <span class="{{if isSpinnerStarts 'fa fa-refresh fa-spin fa-1x fa-fw' 'fa fa-angle-right'}}"  aria-hidden="true"></span> Call me back
-        </button>
-      </div>
-    </div>                 
+ </div>
+{{#if isValidForm}}
+ <div class="row">
+ <div class='col-md-8'>
+<table class="table">
+<thead>
+<tr>
+<th>User</th>
+<th>Details</th>
+
+</tr></thead>
+<tbody>
+{{#each-in userDetails as |key value|}}
+<tr>
+<td>{{key}}</td>
+<td>{{value}}</td>
+</tr>
+
+{{/each-in}}
+</tbody>
+</table>
+</div>
+ </div>
+ {{/if}}
 {{yield}}
