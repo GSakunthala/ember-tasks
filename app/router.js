@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('performance',{path:'/:student_id'});
   });
   this.route('customer-service');
+  this.route('customer-form');
 });
 
 export default Router;

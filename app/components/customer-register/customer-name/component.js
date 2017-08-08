@@ -1,6 +1,6 @@
 import Ember from 'ember';
-
-export default Ember.Component.extend({
+import Validations from './validate';
+export default Ember.Component.extend(Validations,{
 	value:'',
 	focusOut()
 	{

@@ -1,0 +1,29 @@
+<form>
+  <div class="row justify-content-center form-group">
+    <div class="col-12 col-md-10 col-lg-8">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-6 text-center">
+          {{validated-input type="text" labelId='firstName' isReadOnly=isReadonly model=this valuePath="firstName" labelTxt='First Name'}}
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-12 col-md-6 col-lg-6 get-address__form-field text-center">
+          {{validated-input type="text" labelId='surname' isReadOnly=isReadonly model=this valuePath="surname" labelTxt='Surname'}}
+          </div>
+                </div>
+
+           <div class="row">
+        <div class="col-12 col-md-6 col-lg-6 get-address__form-field text-center">
+          {{validated-input type="text" labelId='surname' isReadOnly=isReadonly model=this valuePath="email" labelTxt='Email'}}
+          </div>
+      </div>
+       <div class="row">
+        <div class="col-12 col-md-6 col-lg-6 get-address__form-field text-center">
+          {{validated-input type="text" labelId='surname' isReadOnly=isReadonly model=this valuePath="phone" labelTxt='phone'}}
+          </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+{{yield}}

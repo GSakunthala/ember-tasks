@@ -10,6 +10,10 @@ module.exports = function(defaults) {
     }
   });
 
+  app.import(app.bowerDirectory + '/bootstrap/dist/css/bootstrap.css');
+  app.import(app.bowerDirectory + '/bootstrap/dist/js/bootstrap.js'); 
+
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

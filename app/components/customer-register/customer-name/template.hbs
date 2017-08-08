@@ -4,5 +4,23 @@
       {{input type=type value=value placeholder=placeholder maxlength=maxlength  class="form-control" autocomplete=autoComplete
    name=name 
   disabled=disabled autofocus=autofocus }}
+ <p>model-- {{model}}</p>
+  {{#if (v-get Tthis 'firstName' 'isInvalid')}}
 
+<div class="error">
+{{v-get this 'firstName' 'message'}}
+<!--      {{this.validations.attrs.firstName.message}} -->
+    </div>
+      {{/if}}
+
+<form>
+  {{input value=model.firstName placeholder="Username"}}
+  {{#if (v-get model 'firstName' 'isInvalid')}}
+    <div class="error">
+      {{v-get model 'firstName' 'message'}}
+    </div>
+  {{/if}}
+
+  <button type="submit" disabled={{v-get model 'isInvalid'}}>Submit</button>
+</form>
 {{yield}}
