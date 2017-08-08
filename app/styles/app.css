@@ -4,3 +4,11 @@
 	margin : 5px;
 	width :50%;
 }
+ .validated-input:focus{border:0px solid blue !important;}
+  .has-danger input{border:1px solid red !important;}
+  
+  .form-control-feedback
+  {
+  	position: relative !important;
+  	width:100px !important;
+  }
