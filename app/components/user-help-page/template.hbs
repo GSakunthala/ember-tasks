@@ -1,0 +1,8 @@
+<form>
+{{#each fields as |field|}}
+{{user-help-page/user-input fieldName =field.id  label=field.label model=this}}
+{{/each}}
+{{this.validations.isInvalid}}
+</form>
+
+{{yield}}

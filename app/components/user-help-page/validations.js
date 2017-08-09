@@ -22,23 +22,23 @@ export const UserValidations = buildValidations({
       })
     ]
   },
-  surname: {
+  lastName: {
     validators: [
       validator('presence', {
         presence: true,
-        message: 'Please tell us your surname.'
+        message: 'Please tell us your lastName.'
       }),
       validator('length', {
         max: 40,
-        message: 'Please tell us your surname. There is a character limit of 40.'
+        message: 'Please tell us your lastName. There is a character limit of 40.'
       }),
       validator('format', {
         regex: /^[a-zA-ZÀ-ú' -]+$/,
-        message: 'Please re-type your surname using only letters, accents, hyphens and apostrophes, not numbers.'
+        message: 'Please re-type your lastName using only letters, accents, hyphens and apostrophes, not numbers.'
       }),
       validator('format', {
         regex: /^(?=.*[\w]).+/,
-        message: 'Please tell us your surname using at least one letter.'
+        message: 'Please tell us your lastName using at least one letter.'
       })
     ]
   },

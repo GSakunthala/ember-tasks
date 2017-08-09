@@ -15,6 +15,7 @@ Router.map(function() {
   });
   this.route('customer-service');
   this.route('customer-form');
+  this.route('user-help-service');
 });
 
 export default Router;

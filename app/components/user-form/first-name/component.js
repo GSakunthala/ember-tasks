@@ -1,22 +1,21 @@
 import Ember from 'ember';
 import {
-  ContactDetailsValidations
+  UserValidations
 } from './validator';
 
-export default Ember.Component.extend(ContactDetailsValidations,{
+export default Ember.Component.extend(UserValidations,{
 
 	userObj:'',
 	actions:
 	{
 		onCallMeBack()
 		{
-			alert("1");
 			let userDetails = 
 			{
-				'firstName' : this.get('firstName'),	
-				'surname' : this.get('surname')	,
-				'email' : this.get('email'),
-				'phone' : this.get('phone')	} 
+				'FirstName' : this.get('firstName'),	
+				'LastName' : this.get('surname')	,
+				'Email' : this.get('email'),
+				'Phone' : this.get('phone')	} 
 
 			this.sendAction('onSubmit',userDetails);
 		}

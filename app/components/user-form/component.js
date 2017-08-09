@@ -21,22 +21,19 @@ section:
     	checkValidHours()
 	{
 		let today = moment();
-		console.log(today);
 		
 				//console.log(moment.tz.names());
-				//let us = moment.locale('en');
-				let us = moment.tz("August 5, 2017 11:13:00", "Europe/London");
-								//console.log("uk" + us.format());
+				//let uk_time = moment.locale('en');
+				//let uk_time = moment.tz("Auguk_timet 5, 2017 11:13:00", "Europe/London");
+								//console.log("uk" + uk_time.format());
 
-				//console.log("parsing" + Date.parse(us));
-				console.log("us timings--" + us);
-				console.log("us day--" + us.day());
+				//console.log("parsing" + Date.parse(uk_time));
 
-				console.log("us hours--" + us.get('hour'));
-				let day = us.day();
-				console.log("Day" + day);
-				let hour = us.hour();
-				console.log("Hour" + hour);
+				let uk_time = moment.tz(new Date(), "Europe/London");
+				
+				let day = uk_time.day();
+			
+				let hour = uk_time.hour();
 				let message = `Sorry there's no one available right now. Please leave your details below and we'll call you`;
 				
 				if(day == 0 || day == 6 || (day == 5 && hour>17)) //weekend
@@ -64,20 +61,12 @@ section:
 					this.set('displayMsg',`We'll call back.`);
 				}
 
-
-
-
-
-
-
-
 	},
     actions: {
     changeStep: function (value) {
     },
     onCallMeBack:function(user)
     {
-    	    	alert('call me back');
     	this.setProperties(
     		{
     			'userDetails':user,
@@ -85,7 +74,6 @@ section:
     		}
     		);
 		this.checkValidHours();
-    	console.log(userDetails);
 
 }
 }
