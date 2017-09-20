@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('performance',{path:'/:student_id'});
   });
   this.route('get-quote');
+  this.route('view-bill');
 });
 
 export default Router;

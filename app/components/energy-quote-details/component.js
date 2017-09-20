@@ -4,7 +4,7 @@ import SectionClass from '../../objects/SectionClass';
 export default Ember.Component.extend({
 currentSectionIndex:'',
 successMsg:'',
-noOfSteps : 2,
+noOfSteps : 3,
 sections:[SectionClass.create({
       name: 'fuel',
       component: 'energy-quote-details/select-fuel-type',
@@ -25,7 +25,18 @@ sections:[SectionClass.create({
       canEdit: false,
       valueUpdated: false,
       isEditInProgress: false,
-      select: false
+      select: true
+    }),
+     SectionClass.create({
+      name: 'businessSites2',
+      component: 'energy-quote-details/site',
+      changeStep: 'changeStep',
+      update: 'updateSite',
+      description: 'Your business & usage details2',
+      canEdit: false,
+      valueUpdated: false,
+      isEditInProgress: false,
+      select: true
     }),
    SectionClass.create({
       name: 'contract',
@@ -36,7 +47,7 @@ sections:[SectionClass.create({
       canEdit: false,
       valueUpdated: false,
       isEditInProgress: false,
-      select: false
+      select: true
     })],
     init()
     {

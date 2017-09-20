@@ -1,8 +1,14 @@
-<h1>site</h1>
-<div class="row panel panel-default">
-	<div class="col-sm-4"><h1>{{section.name}}</h1></div>
-		<div class="col-sm-4"><h1>{{section.description}}</h1></div>
-		<button class='btn btn-lg btn-primary' {{action 'checkDone'}}><i class='fa fa-down'></i>Next</button>
+ <div class="panel panel-default">
+    <div class="panel-heading">
+	      <h4 class="panel-title">
+			<a data-toggle="collapse" data-parent="#accordion" href="{{sectionId}}">
+	       {{section.name}}</a>
+	      </h4>
+	    	<div id={{section.name}} class="panel-collapse collapse">
 
+				<p>{{section.description}}</p>
+				<button class='btn btn-lg btn-primary' {{action 'checkDone'}}><i class='fa fa-down'></i>Next</button>
+			</div>
 </div>		
+</div>
 {{yield}}
